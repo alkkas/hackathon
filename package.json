@@ -1,0 +1,32 @@
+{
+  "name": "hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alkkas/hackathon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alkkas/hackathon/issues"
+  },
+  "homepage": "https://github.com/alkkas/hackathon#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-image": "^6.3.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.50.0"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}
