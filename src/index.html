@@ -9,10 +9,202 @@
   </head>
   <body>
     @@include('template/header.html')
-    <main>Hackathon</main>
-    <a href="about.html" class="">About</a>
-    @@include('template/footer.html')
+    <main class="main">
+      <article class="info container">
+        <p class="desc">
+          <span class="purp-text">Школа программирования</span> для детей и
+          взрослых
+        </p>
+        <h1 class="info__title">AllStack</h1>
+        <p class="medium-text">
+          Учим делать игры, сайты, компьютерные программы и мобильные
+          приложения.
+        </p>
 
+        <section class="info__img">
+          <div class="background"></div>
+          <picture>
+            <source media="(min-width:992px)" srcset="img/bw/info-img.png" />
+            <img src="img/color/info-img.png" alt="hat" />
+          </picture>
+        </section>
+
+        <ul class="info-list medium-text">
+          <li class="info-list__item">
+            <span>Онлайн-занятия в группах и индивидуально</span>
+          </li>
+          <li class="info-list__item">
+            <span>Подготовка к олимпиадам</span>
+          </li>
+          <li class="info-list__item">
+            <span>Трудоустройство после обучения</span>
+          </li>
+        </ul>
+
+        <article class="info-btns">
+          <button class="btn medium-text">Попробовать бесплатно</button>
+          <button class="btn btn--empty medium-text">Наши курсы</button>
+        </article>
+      </article>
+      <div class="advs-wrapper container">
+        <article class="advs">
+          <section class="advs-grid">
+            <section class="advs__item">
+              <h3 class="advs__title desc">80% практики. Никакой воды</h3>
+              <picture class="advs__img">
+                <source
+                  media="(min-width:768px)"
+                  srcset="img/bw/umbrella.png"
+                />
+                <img src="img/color/umbrella.png" alt="umbrella" />
+              </picture>
+            </section>
+            <section class="advs__item">
+              <picture class="advs__img mentors__img">
+                <source media="(min-width:768px)" srcset="img/bw/mentors.png" />
+                <img src="img/color/mentors.png" alt="mentors" />
+              </picture>
+              <h3 class="advs__title desc">
+                Преподаватели — действующие IT специалисты
+              </h3>
+            </section>
+            <section class="advs__item">
+              <h3 class="advs__title desc">
+                Работа с реальными проектами во время обучения
+              </h3>
+              <picture class="advs__img">
+                <source media="(min-width:768px)" srcset="img/bw/project.png" />
+                <img src="img/color/project.png" alt="project" />
+              </picture>
+            </section>
+            <section class="advs__item">
+              <h3 class="advs__title desc">Широкая линейка курсов</h3>
+              <picture class="advs__img">
+                <source media="(min-width:768px)" srcset="img/bw/course.png" />
+                <img src="img/color/course.png" alt="course" />
+              </picture>
+            </section>
+          </section>
+          <section class="advs__item advs__item--big">
+            <h3 class="advs__title desc">
+              Участие в хакатонах от
+              <span class="purp-text">GeekBattle</span> <br />и помощь в поиске
+              работы от <span class="purp-text">GeekScout</span>
+            </h3>
+            <picture class="advs__img">
+              <source media="(min-width:768px)" srcset="img/bw/road.png" />
+              <img src="img/color/road.png" alt="road" />
+            </picture>
+          </section>
+        </article>
+      </div>
+      <article class="mentors container">
+        <h2 class="mentors__title title">Наши преподаватели</h2>
+
+        <div class="mentors-wrapper">
+          <section class="mentors__item">
+            <img src="img/profile2.png" alt="man" />
+            <h4 class="mentors__name medium-text">Даниил Пирс</h4>
+            <hr />
+            <p class="mentors__desc desc">
+              Молодой перец в IT-компании «Перцы»
+            </p>
+          </section>
+          <section class="mentors__item">
+            <img src="img/profile1.png" alt="man" />
+            <h4 class="mentors__name medium-text">Елена Степанова</h4>
+            <hr />
+            <p class="mentors__desc desc">
+              Молодой перец в IT-компании «Перцы»
+            </p>
+          </section>
+          <section class="mentors__item">
+            <img src="img/profile5.png" alt="man" />
+            <h4 class="mentors__name medium-text">Алексей Дорожный</h4>
+            <hr />
+            <p class="mentors__desc desc">
+              Молодой перец в IT-компании «Перцы»
+            </p>
+          </section>
+          <section class="mentors__item">
+            <img src="img/profile4.png" alt="man" />
+            <h4 class="mentors__name medium-text">Михаил Калугин</h4>
+            <hr />
+            <p class="mentors__desc desc">
+              Молодой перец в IT-компании «Перцы»
+            </p>
+          </section>
+          <section class="mentors__item">
+            <img src="img/profile3.png" alt="man" />
+            <h4 class="mentors__name medium-text">Мария Иванова</h4>
+            <hr />
+            <p class="mentors__desc desc">
+              Молодой перец в IT-компании «Перцы»
+            </p>
+          </section>
+          <section>
+            <button class="mentors-full">Смотреть всю команду →</button>
+          </section>
+        </div>
+      </article>
+      <article class="form">
+        <h2 class="form__title title">
+          Не можете определиться с выбором курса? <br />
+          <span class="purp-text">Мы поможем!</span>
+        </h2>
+
+        <div class="form-container">
+          <img
+            src="img/magic.png"
+            alt="it's a kind of magic"
+            class="form-magic"
+          />
+          <form action="/" method="POST">
+            <p class="form__desc medium-text">
+              Оставьте заявку и мы свяжемся с вами в течение часа.
+            </p>
+            <p>
+              <input
+                class="btn btn--input medium-text"
+                type="text"
+                placeholder="Ваше имя"
+                required
+              />
+            </p>
+            <p>
+              <input
+                class="btn btn--input medium-text"
+                type="text"
+                placeholder="Возраст ребенка — необязательно"
+              />
+            </p>
+            <p>
+              <input
+                class="btn btn--input medium-text"
+                type="text"
+                placeholder="Телефон"
+                required
+              />
+            </p>
+            <div class="form-submit">
+              <input
+                class="btn btn--disabled medium-text"
+                type="submit"
+                value="Отправить"
+                disabled
+              />
+              <p class="desc form__footer-text">
+                Нажимая кнопку «Отправить», Вы даете свое
+                <a class="purp-text agreement" href="#"
+                  >согласие на обработку персональных данных.</a
+                >
+              </p>
+            </div>
+          </form>
+        </div>
+      </article>
+    </main>
+    @@include('template/footer.html')
     <script src="js/main.js"></script>
   </body>
 </html>

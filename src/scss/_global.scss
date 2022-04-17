@@ -1,0 +1,57 @@
+html {
+  font-family: "ProximaRegular";
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100vh;
+}
+.container {
+  overflow: auto;
+  max-width: 1320px;
+  padding: 0 16px;
+}
+
+.title {
+  @include font-size($big-font-sizes);
+  font-family: "ProximaBold";
+}
+.desc {
+  @include font-size($small-font-sizes);
+  font-family: "ProximaBold";
+  line-height: 160%;
+}
+.medium-text {
+  @include font-size($medium-font-sizes);
+  line-height: 160%;
+}
+
+.purp-text {
+  color: $purp;
+}
+.btn {
+  color: $white;
+  background-color: $purp;
+  border-radius: 10px;
+  padding: 17px 11px;
+  &--empty {
+    color: $purp;
+    background-color: $white;
+    border: 1.5px solid $purp;
+  }
+  &--disabled {
+    color: $lightPurp;
+    background-color: #f2f2f2;
+    border: 1px solid $lightPurp;
+  }
+  &--input {
+    border: 1px solid $purp;
+    background: $white;
+    color: $gray;
+    &::placeholder {
+      color: $gray;
+    }
+  }
+}

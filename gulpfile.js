@@ -32,7 +32,7 @@ function generateCSS(cb) {
 }
 
 function copyImg(cb) {
-  src("src/img/*").pipe(dest("./dist/img")).pipe(sync.stream());
+  src("src/img/**/*").pipe(dest("./dist/img")).pipe(sync.stream());
   cb();
 }
 
@@ -41,7 +41,8 @@ function generateJS(cb) {
   cb();
 }
 function copyFonts(cb) {
-  src("src/fonts/*").pipe(dest("./dist/fonts")).pipe(sync.stream());
+  src("src/fonts/**/*").pipe(dest("./dist/fonts")).pipe(sync.stream());
+  cb();
 }
 function browserSync(cb) {
   sync.init({
@@ -51,10 +52,8 @@ function browserSync(cb) {
   });
 
   watch("./src/js/*.js", generateJS);
-  watch("./src/img/*", copyImg);
   watch("./src/scss/**.scss", generateCSS);
   watch("./src/**.html", generateHTML);
-  watch("./src/fonts/*", copyFonts);
   watch("./src/template/**.html", generateHTML);
   watch("./src/**.html").on("change", sync.reload);
 }

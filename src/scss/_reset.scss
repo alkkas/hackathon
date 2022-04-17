@@ -91,12 +91,16 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-
+* {
+  box-sizing: border-box;
+}
 /* make sure to set some focus styles for accessibility */
 :focus {
   outline: 0;
 }
-
+a {
+  text-decoration: none;
+}
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -287,6 +291,7 @@ textarea {
   margin: 0; /* 2 */
   vertical-align: baseline; /* 3 */
   *vertical-align: middle; /* 3 */
+  border: none;
 }
 
 /**

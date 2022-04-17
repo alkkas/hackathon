@@ -1,9 +1,283 @@
-.hello {
-  font-weight: 300;
+@import "responsive-sizes";
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+.header {
+  margin: 20px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  &__title {
+    font-size: 21px;
+    font-family: "ProximaBold";
+    color: $purp;
+  }
+}
+.menu {
+  display: none;
+  &-flex {
+    display: flex;
+  }
+
+  &__item {
+    margin-left: 36px;
+    &-link {
+      color: $black;
+    }
+  }
+  &__phone {
+    position: relative;
+    margin-left: 53px;
+    &::before {
+      content: url("../img/phone.svg");
+      position: absolute;
+      left: -20px;
+      top: 3px;
+    }
+  }
+}
+.mobile-menu {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: $purp;
+  position: relative;
+  span,
+  span::before,
+  span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid $white;
+    border-radius: 2px;
+  }
+  span::after {
+    top: calc(50% - 6px);
+  }
+  span::before {
+    top: calc(50% + 6px);
+  }
 }
 
-* {
-  color: blue;
-  display: flex;
-  transform: translate(-50%);
+.info {
+  margin-bottom: 60px;
+  &__title {
+    font-size: 55px;
+    font-family: "ProximaBold";
+    color: $purp;
+    line-height: 140%;
+  }
+  &__img {
+    margin: 16px auto 50px auto;
+    width: 187px;
+    height: 180px;
+    position: relative;
+    .background {
+      position: absolute;
+      z-index: -1;
+      bottom: -20px;
+      right: -20px;
+      width: 100%;
+      height: 10;
+      border: 0.57px solid $gray;
+      border-radius: 8px;
+    }
+  }
+  &-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    &__item {
+      line-height: 25px;
+    }
+  }
+  &-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    .btn {
+      letter-spacing: 0.01em;
+    }
+  }
 }
+
+.advs {
+  display: flex;
+  flex-direction: column;
+  &-grid {
+    display: grid;
+    grid-template-columns: auto 9% auto;
+    grid-template-rows: repeat(3, auto);
+    gap: 15px;
+
+    .advs__item:nth-child(1) {
+      grid-column: 1/2;
+    }
+    .advs__item:nth-child(2),
+    .advs__item:nth-child(3) {
+      grid-column: 2/4;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .advs__img {
+        align-self: flex-end;
+      }
+    }
+    .advs__item:nth-child(3) {
+      grid-column: 1/3;
+    }
+  }
+
+  &__item--big {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .advs__title {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #f7f0ff;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(300px);
+  }
+  &__item {
+    border-radius: 8px;
+    background: $white;
+    padding: 15px;
+  }
+}
+
+.mentors {
+  margin: 10px 0 0;
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-items: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 15px;
+  }
+  &__name {
+    font-family: "ProximaBold";
+    margin-top: 10px;
+  }
+  &__desc {
+    font-family: "ProximaRegular";
+  }
+  &__item {
+    margin: 0 0 20px 0;
+    text-align: center;
+
+    img {
+      max-width: 150px;
+      display: block;
+      border-radius: 100%;
+      margin: auto;
+    }
+    hr {
+      width: 107px;
+      margin: 10px auto;
+      border: 1px solid $purp;
+    }
+  }
+  &-full {
+    font-family: "ProximaBold";
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    color: $purp;
+    background: none;
+  }
+}
+
+.form {
+  position: relative;
+  padding: 30px 15px 50px 15px;
+  background-color: $lightPurp;
+
+  &__title {
+    margin-top: 30px;
+  }
+  &-magic {
+    display: none;
+  }
+  &__desc {
+    margin: 30px 0;
+  }
+  .btn--input,
+  .btn--disabled {
+    width: 100%;
+    border-radius: 15px;
+    margin: 15px 0;
+  }
+  &__footer-text {
+    font-family: "ProximaRegular";
+  }
+}
+
+.footer {
+  color: $white;
+  &__title {
+    font-family: "ProximaBold";
+    margin: 15px 0;
+  }
+  &-list__item {
+    font-family: "ProximaRegular";
+    margin: 15px 0;
+  }
+  &-wrapper {
+    background: $black;
+    border: 1px solid transparent;
+  }
+  &-contact {
+    margin: 40px 0 45px;
+    color: $gray;
+    &__text {
+      margin: 10px 0;
+    }
+    &__link {
+      color: $purp;
+      width: 45%;
+      margin-right: 10px;
+    }
+    &__phone {
+      margin-top: 20px;
+      text-align: center;
+      color: $white;
+    }
+  }
+  .contacts {
+    margin-top: 20px;
+    img {
+      margin: 0 10px;
+    }
+  }
+  &-creds {
+    margin: 40px 0;
+    text-align: center;
+    color: $gray;
+    .creds {
+      margin-bottom: 22px;
+    }
+    .developers a {
+      color: $purp;
+    }
+  }
+}
+
+@import "media";

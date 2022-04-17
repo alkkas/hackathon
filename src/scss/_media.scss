@@ -1,0 +1,242 @@
+@media screen and (min-width: 768px) {
+  .header__title {
+    font-size: 20px;
+  }
+  .container {
+    padding: 0 30px;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    &__img {
+      grid-column: 2/3;
+      grid-row: 1/6;
+      justify-self: center;
+      align-self: center;
+    }
+    &-btns {
+      .btn {
+        margin-right: 30px;
+      }
+      justify-content: flex-start;
+    }
+  }
+  .advs {
+    &-grid {
+      gap: 28px;
+    }
+    &__item {
+      padding: 30px;
+    }
+    &__item--big {
+      .advs__title {
+        font-size: 22px;
+      }
+    }
+    &__title {
+      font-size: 18px;
+    }
+  }
+  .mentors {
+    &-wrapper {
+      gap: 10px;
+    }
+    &-full {
+      display: none;
+    }
+  }
+  .form {
+    padding: 30px 30px 50px;
+  }
+  .footer {
+    &-flex {
+      display: flex;
+    }
+    &__item {
+      margin-right: 10%;
+    }
+    &-creds {
+      .creds {
+        margin: 0px;
+      }
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+  .header {
+    margin: 50px 0 100px;
+  }
+  .info {
+    margin-bottom: 100px;
+    grid-template-columns: 1fr 1fr;
+    .desc {
+      font-size: 23px;
+    }
+    &__title {
+      font-size: 102px;
+      font-family: "ProximaExtrabold";
+    }
+    &__img {
+      position: relative;
+      margin: 0 0 36px 0;
+
+      width: 415px;
+      height: 430px;
+    }
+    .background {
+      width: 100%;
+      height: 100%;
+      bottom: -36px;
+      right: -36px;
+    }
+  }
+
+  .advs {
+    position: relative;
+    flex-direction: row;
+    &__title {
+      font-size: 23px;
+    }
+    &__item {
+      img {
+        width: 100%;
+      }
+    }
+    &__item--big {
+      flex-direction: column;
+      margin: 0 0 28px 28px;
+      .advs__title {
+        font-size: 30px;
+      }
+    }
+  }
+  .mentors {
+    &-wrapper {
+      justify-content: center;
+      grid-template-columns: repeat(5, minmax(150px, 200px));
+    }
+    margin-top: 100px;
+  }
+  .form {
+    margin: 100px 0;
+    background: none;
+    &__title {
+      br {
+        display: none;
+      }
+    }
+    &-magic {
+      display: block;
+    }
+    .btn {
+      max-width: 364px;
+    }
+    &-container {
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    &-submit {
+      display: flex;
+      align-items: center;
+      .btn {
+        margin-right: 10px;
+      }
+    }
+  }
+  .btn--empty {
+    border: none;
+    background-color: transparent;
+  }
+  .footer-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-flex {
+    margin-top: 40px;
+  }
+  .footer-contact__phone {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .btn {
+    padding: 17px 30px;
+    line-height: 22.4px;
+  }
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .info {
+    &__title {
+      line-height: 140px;
+      margin: -30px 0;
+    }
+    &-btns {
+      margin: 0;
+      align-self: center;
+    }
+    .desc {
+      font-size: 26px;
+    }
+  }
+  .advs {
+    position: unset;
+    &::before {
+      max-width: 1500px;
+      height: 800px;
+    }
+
+    &__item--big {
+      max-width: 463px;
+      justify-content: space-between;
+      margin: 0 0 30px 30px;
+      padding: 40px 50px;
+      .advs__title {
+        font-size: 36px;
+      }
+    }
+    &__title {
+      font-size: 26px;
+    }
+  }
+  .mentors {
+    &-wrapper {
+      gap: 50px;
+    }
+  }
+  .form {
+    max-width: 1320px;
+    margin: 100px auto;
+    padding: 0 30px;
+    form {
+      max-width: 467px;
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
+    &-submit {
+      .btn--disabled {
+        max-width: 141px;
+        padding: 17px 0;
+      }
+      justify-content: space-between;
+    }
+    &__footer-text {
+      font-size: 12px;
+    }
+  }
+}
