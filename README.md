@@ -10,6 +10,12 @@ Use the package manager [npm](https://www.npmjs.com/) to install gulp
 ```bash
 npm install
 ```
+build project
+
+```bash
+npx gulp
+```
+
 
 ## Usage
 
