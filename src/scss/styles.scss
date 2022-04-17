@@ -102,6 +102,11 @@
     margin-top: 30px;
     .btn {
       letter-spacing: 0.01em;
+      &:nth-child(1):hover {
+        color: $purp;
+        background-color: $white;
+        border: 1.5px solid $purp;
+      }
     }
   }
 }
@@ -228,6 +233,9 @@
   &__footer-text {
     font-family: "ProximaRegular";
   }
+  .agreement:hover {
+    text-decoration: underline;
+  }
 }
 
 .footer {
@@ -254,6 +262,9 @@
       color: $purp;
       width: 45%;
       margin-right: 10px;
+      &:hover {
+        text-decoration: underline;
+      }
     }
     &__phone {
       margin-top: 20px;
@@ -275,6 +286,9 @@
       margin-bottom: 22px;
     }
     .developers a {
+      &:hover {
+        text-decoration: underline;
+      }
       color: $purp;
     }
   }

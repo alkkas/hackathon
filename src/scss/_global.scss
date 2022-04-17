@@ -36,6 +36,12 @@ body {
   background-color: $purp;
   border-radius: 10px;
   padding: 17px 11px;
+  transition: 0.2s ease all;
+  border: 1.5px solid transparent;
+  &:focus {
+    outline: 3px dotted black;
+  }
+
   &--empty {
     color: $purp;
     background-color: $white;
@@ -44,10 +50,10 @@ body {
   &--disabled {
     color: $lightPurp;
     background-color: #f2f2f2;
-    border: 1px solid $lightPurp;
+    border: 1.5px solid $lightPurp;
   }
   &--input {
-    border: 1px solid $purp;
+    border: 1.5px solid $purp;
     background: $white;
     color: $gray;
     &::placeholder {
