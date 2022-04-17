@@ -229,9 +229,11 @@
       margin-bottom: 40px;
     }
     &-submit {
-      .btn--disabled {
+      .form-submit__btn {
         max-width: 141px;
         padding: 17px 0;
+        width: 100%;
+        margin: 15px 10px 15px 0;
       }
       justify-content: space-between;
     }
